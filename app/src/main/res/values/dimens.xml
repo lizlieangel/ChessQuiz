@@ -9,4 +9,5 @@
     <dimen name="card_margin">20dp</dimen>
     <dimen name="card_radius">4dp</dimen>
     <dimen name="button_margin">50dp</dimen>
+    <dimen name="score_size">48sp</dimen>
 </resources>

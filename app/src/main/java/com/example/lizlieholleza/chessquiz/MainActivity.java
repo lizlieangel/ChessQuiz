@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.RadioButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -22,7 +23,19 @@ public class MainActivity extends AppCompatActivity {
             case R.id.q_one_a:
                 if(selectAnswer) {
                     showToastMessage();
-                    score += 1;
+//                    RadioButton radio = (RadioButton)  findViewById(R.id.q_one_a);
+//                    radio.setClickable(false);
+                    break;
+                }
+                break;
+            case R.id.q_one_b:
+                if(selectAnswer) {
+                    showToastMessage();
+//                    RadioButton radio2 = (RadioButton)  findViewById(R.id.q_one_b);
+//                    radio2.setClickable(false);
+//                    RadioButton radio = (RadioButton)  findViewById(R.id.q_one_a);
+//                    radio.setClickable(true);
+                    break;
                 }
                 break;
             default:
@@ -67,6 +80,12 @@ public class MainActivity extends AppCompatActivity {
             default:
                 showToastMessage();
         }
+    }
+
+    public void getScore() {
+        TextView score_view = (TextView) findViewById(R.id.score);
+        score_view.setText("Your score is: " + score);
+        score_view.setVisibility(View.VISIBLE);
     }
 
     public void showToastMessage() {
