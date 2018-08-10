@@ -142,17 +142,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/king"
-                    android:onClick="onCheckboxClicked"/>
+                    android:onClick="answerQuestionThree"/>
                 <CheckBox android:id="@+id/q_three_c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/rook"
-                    android:onClick="onCheckboxClicked"/>
+                    android:onClick="answerQuestionThree"/>
                 <CheckBox android:id="@+id/q_three_d"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/bishop"
-                    android:onClick="onCheckboxClicked"/>
+                    android:onClick="answerQuestionThree"/>
             </LinearLayout>
         </android.support.v7.widget.CardView>
     </LinearLayout>
