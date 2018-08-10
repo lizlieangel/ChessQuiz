@@ -10,4 +10,7 @@
     <string name="question_4">Its movement forms an L shape and can jump overhead the piece blocking it.</string>
     <string name="queen">Queen</string>
     <string name="king">King</string>
+    <string name="stalemate">Stalemate</string>
+    <string name="checkmate">Checkmate</string>
+    <string name="castle">Castle</string>
 </resources>
