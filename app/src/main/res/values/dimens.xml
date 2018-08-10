@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="card_height">300dp</dimen>
-    <dimen name="question_size">80sp</dimen>
-    <dimen name="question_text_size">60sp</dimen>
-    <dimen name="choices_size">36</dimen>
+    <dimen name="question_size">42sp</dimen>
+    <dimen name="question_text_size">28sp</dimen>
+    <dimen name="choices_size">20sp</dimen>
 </resources>
