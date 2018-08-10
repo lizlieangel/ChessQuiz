@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">ChessQuiz</string>
+    <string name="q_one">Question 1</string>
+    <string name="q_two">Question 2</string>
+    <string name="q_three">Question 3</string>
+    <string name="q_four">Question 4</string>
     <string name="question_1">This piece has limited movement. Its capture or mate means the end the game.</string>
     <string name="question_2">This situation ends the game in a draw where the player can no longer make any legal moves; however, his/her King is not in check.</string>
     <string name="question_3">You need this pair for castling. Castling is a way of keeping a very important piece safe while the other piece at an advantageous position.</string>
