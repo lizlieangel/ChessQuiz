@@ -6,4 +6,6 @@
     <dimen name="choices_size">24sp</dimen>
     <dimen name="padding">10dp</dimen>
     <dimen name="margin">10dp</dimen>
+    <dimen name="card_margin">20dp</dimen>
+    <dimen name="card_radius">4dp</dimen>
 </resources>
