@@ -16,4 +16,5 @@
     <string name="stalemate">Stalemate</string>
     <string name="checkmate">Checkmate</string>
     <string name="castle">Castle</string>
+    <string name="submit">Submit Answer</string>
 </resources>
