@@ -12,6 +12,7 @@
     <string name="king">King</string>
     <string name="rook">Rook</string>
     <string name="bishop">Bishop</string>
+    <string name="knight">Knight</string>
     <string name="stalemate">Stalemate</string>
     <string name="checkmate">Checkmate</string>
     <string name="castle">Castle</string>
