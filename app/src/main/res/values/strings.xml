@@ -8,4 +8,6 @@
     <string name="question_2">This situation ends the game in a draw where the player can no longer make any legal moves; however, his/her King is not in check.</string>
     <string name="question_3">You need this pair for castling. Castling is a way of keeping a very important piece safe while the other piece at an advantageous position.</string>
     <string name="question_4">Its movement forms an L shape and can jump overhead the piece blocking it.</string>
+    <string name="queen">Queen</string>
+    <string name="king">King</string>
 </resources>

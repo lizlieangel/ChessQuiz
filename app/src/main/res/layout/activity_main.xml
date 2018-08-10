@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
+
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
@@ -27,18 +28,34 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:padding="@dimen/padding"
                     android:text="@string/q_one"
-                    android:textSize="@dimen/question_size"
-                    android:padding="@dimen/padding"/>
+                    android:textSize="@dimen/question_size" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin"
+                    android:padding="@dimen/padding"
                     android:text="@string/question_1"
                     android:textSize="@dimen/question_text_size"
-                    android:textStyle="italic"
-                    android:padding="@dimen/padding"
-                    android:layout_marginLeft="@dimen/margin"/>
+                    android:textStyle="italic" />
+
+                <RadioButton
+                    android:id="@+id/q_one_a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="@string/queen" />
+
+                <RadioButton
+                    android:id="@+id/q_one_b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="@string/king" />
+                android:onClick="onRadioButtonClicked"/>
+
             </LinearLayout>
         </android.support.v7.widget.CardView>
     </LinearLayout>
