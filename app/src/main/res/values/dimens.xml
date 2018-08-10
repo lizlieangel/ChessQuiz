@@ -4,4 +4,6 @@
     <dimen name="question_size">42sp</dimen>
     <dimen name="question_text_size">28sp</dimen>
     <dimen name="choices_size">20sp</dimen>
+    <dimen name="padding">10dp</dimen>
+    <dimen name="margin">10dp</dimen>
 </resources>
