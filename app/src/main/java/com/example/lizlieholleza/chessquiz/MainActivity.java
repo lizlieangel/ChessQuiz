@@ -56,6 +56,19 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void answerQuestionFour(View v) {
+        selectAnswer = ((RadioButton) v).isChecked();
+        switch (v.getId()) {
+            case R.id.q_four_c:
+                if(selectAnswer) {
+                    showToastMessage();
+                    score += 1;
+                }
+            default:
+                showToastMessage();
+        }
+    }
+
     public void showToastMessage() {
         Toast.makeText(this, "Are you sure?", Toast.LENGTH_SHORT).show();
     }
