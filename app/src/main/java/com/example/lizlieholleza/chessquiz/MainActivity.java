@@ -21,12 +21,12 @@ public class MainActivity extends AppCompatActivity {
         switch (v.getId()) {
             case R.id.q_one_a:
                 if(selectAnswer) {
-                    Toast.makeText(this,"Are you sure?", Toast.LENGTH_SHORT ).show();
+                    showToastMessage();
                     score += 1;
                 }
                 break;
             default:
-                Toast.makeText(this, "Are you sure?", Toast.LENGTH_SHORT).show();
+                showToastMessage();
                 break;
         }
     }
@@ -35,13 +35,33 @@ public class MainActivity extends AppCompatActivity {
         switch (v.getId()) {
             case R.id.q_two_a:
                 if(selectAnswer) {
-                    Toast.makeText(this, "Are you sure?", Toast.LENGTH_SHORT).show();
+                    showToastMessage();
                     score += 1;
                 }
              default:
-                 Toast.makeText(this, "Are you sure?", Toast.LENGTH_SHORT).show();
+                 showToastMessage();
                  break;
         }
+    }
+
+    public void answerQuestionThree(View v) {
+        selectAnswer = ((CheckBox) v).isChecked();
+        if(v.getId() == R.id.q_three_b && v.getId() == R.id.q_three_c)  {
+            if(selectAnswer) {
+                showInstruction();
+                score += 1;
+            }
+        } else {
+            showInstruction();
+        }
+    }
+
+    public void showToastMessage() {
+        Toast.makeText(this, "Are you sure?", Toast.LENGTH_SHORT).show();
+    }
+
+    public void showInstruction() {
+        Toast.makeText(this, "Please select two", Toast.LENGTH_SHORT).show();
     }
 }
 
