@@ -19,6 +19,6 @@
             android:id="@+id/info_text"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Hello! I'm Lizlie"/>
+            android:text="@string/q_one"/>
     </android.support.v7.widget.CardView>
 </LinearLayout>
