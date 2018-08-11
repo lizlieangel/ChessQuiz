@@ -23,18 +23,12 @@ public class MainActivity extends AppCompatActivity {
             case R.id.q_one_a:
                 if(selectAnswer) {
                     showToastMessage();
-//                    RadioButton radio = (RadioButton)  findViewById(R.id.q_one_a);
-//                    radio.setClickable(false);
                     break;
                 }
                 break;
             case R.id.q_one_b:
                 if(selectAnswer) {
                     showToastMessage();
-//                    RadioButton radio2 = (RadioButton)  findViewById(R.id.q_one_b);
-//                    radio2.setClickable(false);
-//                    RadioButton radio = (RadioButton)  findViewById(R.id.q_one_a);
-//                    radio.setClickable(true);
                     break;
                 }
                 break;
