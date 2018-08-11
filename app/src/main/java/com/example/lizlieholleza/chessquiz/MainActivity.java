@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.TextView;
@@ -79,9 +80,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void getScore(View v) {
-        TextView score_view = findViewById(R.id.score);
-        score_view.setText("Your score is: " + checkAnswers());
-        score_view.setVisibility(View.VISIBLE);
+        Button submitButton = findViewById(R.id.submit_button);
+        TextView scoreView = findViewById(R.id.score);
+        scoreView.setText("Your score is: " + checkAnswers());
+        scoreView.setVisibility(View.VISIBLE);
+        submitButton.setClickable(false);
+
     }
 
     public int checkAnswers() {
