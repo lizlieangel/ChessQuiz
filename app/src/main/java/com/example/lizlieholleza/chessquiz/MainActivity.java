@@ -11,77 +11,95 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     private int score = 0;
     private boolean selectAnswer;
+    private boolean quesOne, quesTwo, quesThree, quesFour = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-    public void answerQuestionOne(View v) {
+    public boolean answerQuestionOne(View v) {
         selectAnswer = ((RadioButton) v).isChecked();
         switch (v.getId()) {
             case R.id.q_one_a:
                 if(selectAnswer) {
                     showToastMessage();
-                    break;
-                }
-                break;
-            case R.id.q_one_b:
-                if(selectAnswer) {
-                    showToastMessage();
-                    break;
+                    return quesOne = true;
                 }
                 break;
             default:
                 showToastMessage();
-                break;
+                return quesOne;
         }
+        return quesOne;
     }
-    public void answerQuestionTwo(View v) {
+    public boolean answerQuestionTwo(View v) {
         selectAnswer = ((RadioButton) v).isChecked();
         switch (v.getId()) {
             case R.id.q_two_a:
                 if(selectAnswer) {
                     showToastMessage();
-                    score += 1;
+                    return quesTwo = true;
                 }
+                break;
              default:
                  showToastMessage();
                  break;
         }
+        return quesTwo;
     }
 
-    public void answerQuestionThree(View v) {
+    public boolean answerQuestionThree(View v) {
         selectAnswer = ((CheckBox) v).isChecked();
         if(v.getId() == R.id.q_three_b && v.getId() == R.id.q_three_c)  {
             if(selectAnswer) {
                 showInstruction();
-                score += 1;
+                return quesThree = true;
             }
         } else {
             showInstruction();
+            return quesThree;
         }
+        return quesThree;
     }
 
-    public void answerQuestionFour(View v) {
+    public boolean answerQuestionFour(View v) {
         selectAnswer = ((RadioButton) v).isChecked();
         switch (v.getId()) {
             case R.id.q_four_c:
                 if(selectAnswer) {
                     showToastMessage();
-                    score += 1;
+                   return quesFour = true;
                 }
+                break;
             default:
                 showToastMessage();
+                break;
         }
+        return quesFour;
     }
 
     public void getScore() {
         TextView score_view = (TextView) findViewById(R.id.score);
-        score_view.setText("Your score is: " + score);
+        score_view.setText("Your score is: " + checkAnswers());
         score_view.setVisibility(View.VISIBLE);
     }
 
+    public int checkAnswers() {
+        if(quesOne) {
+            score += 1;
+        }
+        if(quesTwo) {
+            score += 1;
+        }
+        if(quesThree) {
+            score += 1;
+        }
+        if(quesFour) {
+            score += 1;
+        }
+        return score;
+    }
     public void showToastMessage() {
         Toast.makeText(this, "Are you sure?", Toast.LENGTH_SHORT).show();
     }
