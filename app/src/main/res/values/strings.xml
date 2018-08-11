@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">ChessQuiz</string>
     <string name="q_one">Question 1</string>
     <string name="q_two">Question 2</string>

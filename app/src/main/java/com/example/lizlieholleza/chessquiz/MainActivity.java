@@ -2,6 +2,7 @@ package com.example.lizlieholleza.chessquiz;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.RadioButton;
@@ -78,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void getScore(View v) {
-        TextView score_view = (TextView) findViewById(R.id.score);
+        TextView score_view = findViewById(R.id.score);
         score_view.setText("Your score is: " + checkAnswers());
         score_view.setVisibility(View.VISIBLE);
     }
