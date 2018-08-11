@@ -11,7 +11,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     private int score = 0;
     private boolean selectAnswer;
-    private boolean quesOne, quesTwo, quesThree, quesFour = false;
+    private boolean quesOne, quesTwo, quesThree, quesFour;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,66 +20,64 @@ public class MainActivity extends AppCompatActivity {
     }
     public boolean answerQuestionOne(View v) {
         selectAnswer = ((RadioButton) v).isChecked();
-        switch (v.getId()) {
-            case R.id.q_one_a:
-                if(selectAnswer) {
-                    showToastMessage();
-                    return quesOne = true;
-                }
-                break;
-            default:
+        if (v.getId() == R.id.q_one_b) {
+            if(selectAnswer) {
                 showToastMessage();
-                return quesOne;
+                return quesOne = true;
+            }
+        } else {
+            if(selectAnswer) {
+
+                showToastMessage();
+                return quesOne = false;
+            }
         }
         return quesOne;
     }
     public boolean answerQuestionTwo(View v) {
         selectAnswer = ((RadioButton) v).isChecked();
-        switch (v.getId()) {
-            case R.id.q_two_a:
-                if(selectAnswer) {
-                    showToastMessage();
-                    return quesTwo = true;
-                }
-                break;
-             default:
-                 showToastMessage();
-                 break;
+        if (v.getId() == R.id.q_two_a) {
+            if(selectAnswer) {
+                showToastMessage();
+                return quesTwo = true;
+            }
+        } else {
+            if(selectAnswer) {
+                return  quesTwo = false;
+            }
         }
         return quesTwo;
     }
 
     public boolean answerQuestionThree(View v) {
+        CheckBox queen = findViewById(R.id.q_three_a);
+        CheckBox king = findViewById(R.id.q_three_b);
+        CheckBox rook = findViewById(R.id.q_three_c);
+        CheckBox bishop = findViewById(R.id.q_three_d);
         selectAnswer = ((CheckBox) v).isChecked();
-        if(v.getId() == R.id.q_three_b && v.getId() == R.id.q_three_c)  {
-            if(selectAnswer) {
-                showInstruction();
-                return quesThree = true;
-            }
+        if(king.isChecked() && rook.isChecked() && !queen.isChecked() && !bishop.isChecked()) {
+            showInstruction();
+            return quesThree = true;
         } else {
             showInstruction();
-            return quesThree;
+            return  quesThree = false;
         }
-        return quesThree;
     }
 
     public boolean answerQuestionFour(View v) {
         selectAnswer = ((RadioButton) v).isChecked();
-        switch (v.getId()) {
-            case R.id.q_four_c:
-                if(selectAnswer) {
-                    showToastMessage();
-                   return quesFour = true;
-                }
-                break;
-            default:
+        if (v.getId() == R.id.q_four_c) {
+            if(selectAnswer) {
                 showToastMessage();
-                break;
+               return quesFour = true;
+            }
+        } else {
+            showToastMessage();
         }
         return quesFour;
     }
 
-    public void getScore() {
+    public void getScore(View v) {
         TextView score_view = (TextView) findViewById(R.id.score);
         score_view.setText("Your score is: " + checkAnswers());
         score_view.setVisibility(View.VISIBLE);
